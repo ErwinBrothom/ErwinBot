@@ -5,7 +5,7 @@
 
 var text = {
     getLine : function() {
-        return this.lines[0].getText();
+        return this.lines[1].getText();
     },
     lines : [
         Line("Dit is tekst"),

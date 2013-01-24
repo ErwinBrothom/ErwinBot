@@ -18,7 +18,18 @@ var Line = function(params) {
         }
     output.text = params.text;
     
-    
+    if (isUndefined(params.filterFunc)) {
+        output.filterFunc = function() {
+            return true;
+        }
+    } else {
+        output.filterFunc = params.filterFunc;
+    }
     
     return output;
+}
+
+
+var isUndefined = function(obj) {
+    return (typeof obj === "undefined") 
 }
